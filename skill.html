@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Overview</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg-color: #fff;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .skills-section {
+            margin-top: 50px;
+        }
+        .card {
+            margin-bottom: 20px;
+            background-color: var(--card-bg-color);
+            transition: background-color 0.3s ease;
+        }
+        .card:hover {
+            background-color: var(--secondary-color);
+            color: var(--card-bg-color);
+        }
+        .btn-theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<button class="btn btn-primary btn-theme-toggle" onclick="toggleTheme()">You Can change Theme</button>
+
+<div class="container skills-section">
+    <h1 class="text-center animate__animated animate__fadeInDown">Skills Summary</h1>
+
+    <div class="card animate__animated animate__fadeInUp" data-aos="fade-up">
+        <div class="card-body">
+            <h5 class="card-title">Programming Languages</h5>
+            <p class="card-text">Proficient in: HTML, CSS, Python, Java, SQL, C#, PHP</p>
+            <p class="card-text">Familiar with: AI/ML, IoT</p>
+        </div>
+    </div>
+
+    <div class="card animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-body">
+            <h5 class="card-title">Certifications</h5>
+            <p class="card-text">Certified in Python, Java with DataFlair</p>
+        </div>
+    </div>
+
+    <div class="card animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-body">
+            <h5 class="card-title">Experience</h5>
+            <h5 class="card-title">Python Django Trainee</h5>
+            <p class="card-text">Developed projects utilizing Python and Django, focusing on problem-solving and detail-oriented coding.</p>
+            <p class="card-text">Developed web applications using Django, enhancing both front-end and back-end functionalities.</p>
+            <p class="card-text">Designed and managed databases with Django ORM, ensuring data integrity and performance.</p>
+            <p class="card-text">Implemented new features and improving application performance and user experience.</p>
+            <p class="card-text">Integrated third-party APIs and services, extending application capabilities.</p>
+            <p class="card-text">Contributed to code reviews and wrote unit tests to maintain high-quality standards</p>
+            <p class="card-text">Applied data structures and algorithms to enhance software performance.</p>
+        </div>
+    </div>
+
+    <div class="card animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-body">
+            <h5 class="card-title">Soft Skill</h5>
+            <p class="card-text">People Management</p>
+        </div>
+    </div>
+
+    <div class="card animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-body">
+            <h5 class="card-title">Additional Skills</h5>
+            <p class="card-text">Knowledgeable in integrating AI/ML models and IoT solutions into applications.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+    AOS.init();
+
+    function toggleTheme() {
+        const root = document.documentElement;
+        if (root.style.getPropertyValue('--background-color') === '#f8f9fa') {
+            root.style.setProperty('--background-color', '#333');
+            root.style.setProperty('--text-color', '#f8f9fa');
+            root.style.setProperty('--card-bg-color', '#444');
+            root.style.setProperty('--primary-color', '#17a2b8');
+            root.style.setProperty('--secondary-color', '#28a745');
+        } else {
+            root.style.setProperty('--background-color', '#f8f9fa');
+            root.style.setProperty('--text-color', '#333');
+            root.style.setProperty('--card-bg-color', '#fff');
+            root.style.setProperty('--primary-color', '#007bff');
+            root.style.setProperty('--secondary-color', '#6c757d');
+        }
+    }
+</script>
+</body>
+</html>
